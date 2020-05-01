@@ -1,0 +1,46 @@
+.front-page {
+	header {
+		width: 100%;
+		position: fixed;
+		top: 0;
+	    left: 0;
+	    z-index: 70;
+	}
+}
+
+header {
+	height: 80px;
+	padding: 0 60px;
+	font-family: $font-family;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 20px;
+	text-transform: uppercase;
+}
+.releases-column {
+	align-self: center;
+    grid-column: col-start 1/span 5;
+}
+.logo {
+	align-self: center;
+	justify-self: center;
+    grid-column: col-start 6/span 2;
+}
+.menu-column {
+	align-self: center;
+	justify-self: end;
+    grid-column: col-start 8/span 5;
+    display: flex;
+}
+.menu-list {
+	padding-left: 0;
+	margin: 0;
+	list-style: none;
+	display: flex;
+}
+.menu-item {
+	margin: 0 25px;
+}
+.cart {
+	margin-left: 25px;
+}
