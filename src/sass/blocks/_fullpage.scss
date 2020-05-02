@@ -25,6 +25,20 @@ html.fp-enabled,
 }
 .fp-slide {
     float: left;
+    width: 100%!important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 80px 60px 0;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 0;
+    transition: all .7s ease-in-out;
+}
+.fp-slide.active {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
 }
 .fp-slide, .fp-slidesContainer {
     height: 100%;
@@ -52,6 +66,8 @@ html.fp-enabled,
 .fp-slidesContainer {
     float: left;
     position: relative;
+    width: 100%!important;
+    transform: none!important;
 }
 .fp-controlArrow {
     -webkit-user-select: none; /* webkit (safari, chrome) browsers */
@@ -62,24 +78,21 @@ html.fp-enabled,
     z-index: 4;
     top: 50%;
     cursor: pointer;
-    width: 0;
-    height: 0;
-    border-style: solid;
+    width: 40px;
+    height: 40px;
     margin-top: -38px;
     -webkit-transform: translate3d(0,0,0);
     -ms-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
+    background: url(../img/arrow_slide.svg) 0 0 no-repeat;
+    background-size: 40px;
 }
 .fp-controlArrow.fp-prev {
-    left: 15px;
-    width: 0;
-    border-width: 38.5px 34px 38.5px 0;
-    border-color: transparent #fff transparent transparent;
+    left: 60px;
+    transform: rotate(180deg);
 }
 .fp-controlArrow.fp-next {
-    right: 15px;
-    border-width: 38.5px 0 38.5px 34px;
-    border-color: transparent transparent transparent #fff;
+    right: 60px;
 }
 .fp-scrollable {
     overflow: hidden;
@@ -119,6 +132,7 @@ html.fp-enabled,
     left: 0 !important;
     right: 0;
     margin: 0 auto !important;
+    text-align: center;
 }
 .fp-slidesNav.fp-bottom {
     bottom: 17px;
@@ -134,8 +148,8 @@ html.fp-enabled,
 #fp-nav ul li,
 .fp-slidesNav ul li {
     display: block;
-    width: 14px;
-    height: 13px;
+    width: 8px;
+    height: 8px;
     margin: 7px;
     position:relative;
 }
@@ -156,34 +170,27 @@ html.fp-enabled,
 .fp-slidesNav ul li a.active span,
 #fp-nav ul li:hover a.active span,
 .fp-slidesNav ul li:hover a.active span{
-    height: 12px;
-    width: 12px;
-    margin: -6px 0 0 -6px;
     border-radius: 100%;
+    background-color: rgba(18, 18, 18, 0.5);
+    border-color: transparent;
  }
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
     border-radius: 50%;
     position: absolute;
     z-index: 1;
-    height: 4px;
-    width: 4px;
-    border: 0;
-    background: #333;
+    height: 8px;
+    width: 8px;
+    border: 2px solid rgba(18, 18, 18, 0.3);
+    background-color: transparent;
     left: 50%;
     top: 50%;
-    margin: -2px 0 0 -2px;
     -webkit-transition: all 0.1s ease-in-out;
     -moz-transition: all 0.1s ease-in-out;
     -o-transition: all 0.1s ease-in-out;
     transition: all 0.1s ease-in-out;
 }
-#fp-nav ul li:hover a span,
-.fp-slidesNav ul li:hover a span{
-    width: 10px;
-    height: 10px;
-    margin: -5px 0px 0px -5px;
-}
+
 #fp-nav ul li .fp-tooltip {
     position: absolute;
     top: -2px;
