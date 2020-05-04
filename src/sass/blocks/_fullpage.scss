@@ -29,7 +29,7 @@ html.fp-enabled,
     position: absolute;
     left: 0;
     top: 0;
-    padding: 80px 60px 0;
+    padding: 0 60px;
     visibility: hidden;
     opacity: 0;
     z-index: 0;
@@ -135,7 +135,7 @@ html.fp-enabled,
     text-align: center;
 }
 .fp-slidesNav.fp-bottom {
-    bottom: 17px;
+    bottom: 80px;
 }
 .fp-slidesNav.fp-top {
     top: 17px;

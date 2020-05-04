@@ -1,10 +1,37 @@
-new fullpage('#fullpage', {
-    //options here
-    autoScrolling:true,
-    scrollHorizontally: true,
-    slidesNavigation: true
-});
+// new fullpage('#fullpage', {
+//     //options here
+//     autoScrolling:true,
+//     scrollHorizontally: true,
+//     slidesNavigation: true,
+//     fixedElements: 'header, .footer-social',
 
+//     onSlideLeave: function( section, origin, destination, direction){
+// 		var leavingSlide = this;
+
+// 		leavingSlide.classList.add("leaveAnimate");
+// 		console.log("переход");
+// 	}
+// });
+$(document).ready(function() {
+	$('#fullpage').fullpage({
+        'autoScrolling': true,
+	    'scrollHorizontally': true,
+	    'slidesNavigation': true,
+	    'fixedElements': 'header, .footer-social',
+
+	    onSlideLeave: function( section, origin, destination, direction){
+			var leavingSlide = origin.index;
+
+			$('.slide-photo-column img').removeClass('animateClose');
+			$('.fp-slide').eq(leavingSlide).find('.slide-photo-column img').addClass('animateClose');
+
+			// $('.fp-slide').eq(leavingSlide).find(".slide-photo-column img").animate({
+			// 	left: "-100%"
+			// }, 1500 );
+		}
+	})
+
+})
 
 // $(document).ready(function() {
 //     $('#fullpage').fullpage({

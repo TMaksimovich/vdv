@@ -1,7 +1,9 @@
 .slide-photo-column {
-	grid-column: col-start 2/span 7;
+	grid-column: col-start 2/span 6;
 	img {
-		max-width: 100%;
+		width: 100%;
+		z-index: 10;
+		position: relative;
 	}
 }
 .slide-desc-column {
@@ -58,5 +60,30 @@
 	.btn {
 		display: block;
 		margin: 65px auto 0;
+	}
+}
+.slide.active .slide-photo-column img {
+	animation: newSlide 0.5s ease-in-out;
+}
+.animateClose {
+	animation: leaveSlide 0.5s ease-in-out;
+}
+
+
+@keyframes newSlide {
+	from {
+		transform: translateX(100%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+@keyframes leaveSlide {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-100%);
 	}
 }
