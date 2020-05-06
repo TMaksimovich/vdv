@@ -22,8 +22,8 @@ $(document).ready(function() {
 	    onSlideLeave: function( section, origin, destination, direction){
 			var leavingSlide = origin.index;
 
-			$('.slide-photo-column img').removeClass('animateClose');
-			$('.fp-slide').eq(leavingSlide).find('.slide-photo-column img').addClass('animateClose');
+			$('.fp-slide').removeClass('animateClose');
+			$('.fp-slide').eq(leavingSlide).addClass('animateClose');
 
 			// $('.fp-slide').eq(leavingSlide).find(".slide-photo-column img").animate({
 			// 	left: "-100%"

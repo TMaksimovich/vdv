@@ -1,0 +1,54 @@
+.page {
+	height: 100vh;
+	main {
+		padding: 0 60px 80px;
+		height: calc(100vh - 80px);
+    	align-content: center;
+	}
+}
+// 404
+.error-page--green {
+	background: url(../img/noise.png) repeat, #8CAB6F;
+}
+.error-page-box {
+	grid-column: col-start 1/span 12;
+	justify-self: center;
+    text-align: center;
+    p {
+		font-size: 24px;
+		line-height: 33px;
+		margin-top: 35px;
+		margin-bottom: 40px;
+    }
+}
+.error-page-img-box {
+	display: flex;
+	align-items: center;
+	img {
+		transform: rotate(4.98deg);
+		margin: 0 25px;
+	}
+}
+// *******************************************//
+
+// О нас
+.about-page {
+	background: url(../img/noise.png) repeat;
+}
+.about-img-box {
+	grid-column: col-start 2/span 4;
+	align-self: center;
+	img {
+		width: 100%;
+	}
+}
+.about-desc-box {
+	grid-column: col-start 7/span 5;
+	align-self: center;
+	p {
+		margin-bottom: 20px;
+	}
+	a {
+		font-weight: 700;
+	}
+}
