@@ -1,3 +1,8 @@
+.front-page {
+	main {
+		padding: 0;
+	}
+}
 .slide-photo-column {
 	grid-column: col-start 2/span 6;
 	img {
@@ -79,7 +84,9 @@
 		animation: 0.7s vdvTranslateLeft 0.2s ease-in-out;
 	}
 	.desc-body {
-		animation: 1s opacityElem 0.3s ease;
+		opacity: 0;
+		animation: 1s opacityElem 0.5s ease;
+		animation-fill-mode: forwards;
 	}
 }
 .animateClose {
@@ -93,7 +100,7 @@
 		animation: 0.8s leaveSlideRight ease-in-out;
 	}
 	.desc-body {
-		animation: 1s opacityElem 0.5s alternate ease;
+		animation: 1s opacityElem alternate ease;
 	}
 }
 
