@@ -1,0 +1,35 @@
+.product-img {
+	img {
+		width: 100%;
+	}
+}
+.product-link {
+	display: block;
+}
+.product-desc {
+	font-size: 16px;
+	line-height: 22px;
+	margin-top: 10px;
+}
+.product-name {
+	font-weight: 700;
+}
+.product-meta {
+	margin-top: 7px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	.product-price {
+		margin-top: 0;
+		font-size: 24px;
+		line-height: 30px;
+	}
+}
+.add-cart {
+	width: 29px;
+	height: 29px;
+	border-radius: 50%;
+	border: 1px solid $font-color;
+	background: url(../img/cart.svg) center 43% no-repeat;
+	background-size: 11px 14px;
+}

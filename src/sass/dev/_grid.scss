@@ -10,7 +10,7 @@
             "header"
             "main"
             "footer";
-  grid-template-rows: 80px calc(100vh - 160px) 80px;
+  grid-template-rows: 80px minmax(calc(100vh - 160px), max-content) 80px;
   header {
     grid-area: header;
   }

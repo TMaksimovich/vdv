@@ -33,7 +33,8 @@
 
 // О нас
 .about-page,
-.product-item {
+.product-post,
+.shop-page {
 	background: url(../img/noise.png) repeat;
 	main {
 		opacity: 0;
@@ -191,3 +192,18 @@
 
 // *******************************************//
 
+// Магазин
+.filter {
+    grid-column: col-start 12/span 1;
+    justify-self: stretch;
+    margin-bottom: 30px;
+}
+.product-grid {
+	grid-column: col-start 2/span 10;
+	grid-template-columns: repeat(3, minmax(50px, 33.3%) );
+	grid-gap: 70px;
+}
+.pagination {
+    grid-column: col-start 1/span 12;
+    justify-self: center;
+}
