@@ -210,3 +210,101 @@
 
 // *******************************************//
 // Релиз Подробнее
+.post-grid {
+	grid-column: col-start 2/span 10;
+	grid-template-columns: [main-start] repeat(10, [col-start] minmax(80px, 1fr)) [main-end];
+	padding-top: 80px;
+	grid-row-gap: 80px;
+	grid-auto-flow: row;
+}
+.about-post,
+.about-post-text-img,
+.about-post-tracklist {
+	grid-column: col-start 1/span 10;
+	align-self: center;
+	display: flex;
+}
+.about-post-text {
+	grid-column: col-start 2/span 8;
+}
+.about-post-footer {
+	grid-column: col-start 1/span 10;
+	text-align: center;
+	padding-bottom: 70px;
+	p {
+		font-family: $font-family;
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 30px;
+		margin: 25px 0;
+	}
+}
+.about-post-desc,
+.about-post-img,
+.about-post-tracklist-img,
+.about-post-tracklist-desc {
+	width: 50%;
+	flex-basis: 50%;
+}
+blockquote {
+	margin: 0;
+	align-self: center;
+	display: flex;
+	flex-direction: column;
+	padding-right: 133px;
+}
+cite {
+	font-style: normal;
+	align-self: flex-end;
+	margin-top: 20px;
+}
+.about-post-img,
+.about-post-tracklist-img {
+	img {
+		width: 100%;
+		max-width: 537px;
+	}
+}
+.about-post-text-img {
+	.about-post-desc {
+		align-self: center;
+	}
+	&:nth-child(odd) {
+		.about-post-desc {
+			order: 1;
+		}
+		.about-post-img {
+			order: 2;
+			text-align: right;
+		}
+	}
+}
+.about-post-tracklist-desc {
+	padding-left: 20px;
+	display: grid;
+	grid-template-columns: [main-start] repeat(6, [col-start] minmax(80px, 1fr)) [main-end];
+	align-content: center;
+	h2 {
+		font-family: $font-family;
+		font-size: 36px;
+		line-height: 45px;
+		margin-top: 0;
+		margin-bottom: 20px;
+		grid-column: col-start 1/span 6;
+	}
+	h3 {
+		font-size: 21px;
+		margin: 0;
+	}
+	ul {
+		margin: 0;
+		padding-left: 0;
+		list-style: none;
+	}
+}
+.about-post-tracklist-a {
+	grid-column: col-start 1/span 6;
+}
+.about-post-tracklist-b {
+	grid-column: col-start 3/span 4;
+}
