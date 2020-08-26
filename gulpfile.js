@@ -1,6 +1,7 @@
 'use strict';
 
 //npm i --save-dev gulp gulp-watch gulp-autoprefixer gulp-uglify gulp-sass gulp-sourcemaps gulp-rigger gulp-minify-css gulp-csscomb gulp-imagemin imagemin-pngquant browser-sync rimraf gulp-svgo gulp-typograf gulp-merge-media-queries
+// Gulp 4
 
 var gulp = require('gulp'),
     watch = require('gulp-watch'),
@@ -18,6 +19,7 @@ var gulp = require('gulp'),
     typograf = require('gulp-typograf'),
     rimraf = require('rimraf'),
     mmq = require('gulp-merge-media-queries'),
+    cache = require('gulp-cache'),
     reload = browserSync.reload;
 
 var path = {
@@ -61,8 +63,9 @@ var config = {
     logPrefix: "dev"
 };
 
-gulp.task('server', function () {
-    browserSync(config);
+gulp.task('server', function (done) {
+  browserSync.init(config);
+  done();
 });
 
 gulp.task('clean', function (cb) {
@@ -112,12 +115,16 @@ gulp.task('js:build', function () {
 
 gulp.task('image:build', function () {
     return gulp.src(path.src.img)
-        .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            use: [pngquant()],
-            interlaced: true
-        }))
+        .pipe(cache(imagemin([
+          imagemin.gifsicle({ interlaced: true }),
+          imagemin.mozjpeg({quality: 75, progressive: true}),
+          pngquant(),
+          imagemin.svgo({ 
+            plugins: [
+              { removeViewBox: false }
+            ] 
+          }),
+        ])))
         .pipe(gulp.dest(path.build.img))
         .pipe(reload({stream: true}));
 });
@@ -139,43 +146,24 @@ gulp.task('fonts:build', function() {
         .pipe(gulp.dest(path.build.fonts))
 });
 
-gulp.task('build', [
-    'html:build',
-    'style:build',
-    'image:build',
-    'svg:build',
-    'js:build',
-    'libs:build'
-]);
-
-gulp.task('build-full', [
-    'html:build',
-    'style:build',
-    'image:build',
-    'svg:build',
-    'js:build',
-    'libs:build',
-    'fonts:build'
-]);
-
-gulp.task('watch', function(){
-    watch([path.watch.html], function(event, cb) {
-        gulp.start('html:build');
-    });
-    watch([path.watch.style], function(event, cb) {
-        gulp.start('style:build');
-    });
-    watch([path.watch.js], function(event, cb) {
-        gulp.start('js:build');
-    });
-    watch([path.watch.img], function(event, cb) {
-        gulp.start('image:build');
-    });
-    watch([path.watch.fonts], function(event, cb) {
-        gulp.start('fonts:build');
-    });
+// очистка кэша
+gulp.task('cache:clear', function() {
+  cache.clearAll();
 });
 
+// сборка
+gulp.task('build', gulp.series('html:build', 'style:build', 'image:build', 'svg:build', 'js:build', 'libs:build'));
+gulp.task('build-full', gulp.series('html:build', 'style:build', 'image:build', 'svg:build', 'js:build', 'libs:build', 'fonts:build'));
 
-gulp.task('default', ['build', 'server', 'watch']);
-gulp.task('full', ['build-full', 'server', 'watch']);
+// запуск задач при изменении файлов
+gulp.task('watch', function(){
+    gulp.watch(path.watch.html, gulp.series('html:build'));
+    gulp.watch(path.watch.style, gulp.series('style:build'));
+    gulp.watch(path.watch.js, gulp.series('js:build'));
+    gulp.watch(path.watch.img, gulp.series('image:build'));
+    gulp.watch(path.watch.fonts, gulp.series('fonts:build'));
+});
+
+// задача по умолчанию
+gulp.task('default', gulp.series('build', gulp.parallel('server', 'watch')));
+gulp.task('full', gulp.series('build-full', gulp.parallel('server', 'watch')));

@@ -23,7 +23,7 @@ $(document).ready(function() {
 			var leavingSlide = origin.index;
 
 			$('.fp-slide').removeClass('animateClose');
-			$('.fp-slide').eq(leavingSlide).addClass('animateClose');
+      $('.fp-slide').eq(leavingSlide).addClass('animateClose');
 
 			// $('.fp-slide').eq(leavingSlide).find(".slide-photo-column img").animate({
 			// 	left: "-100%"
