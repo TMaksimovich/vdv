@@ -1,0 +1,67 @@
+@keyframes slideUp {
+	from {
+    transform: translateY(100px);
+	}
+	to {
+    transform: translateY(0);
+	}
+}
+
+@keyframes newSlide {
+	from {
+		transform: translateX(100%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+@keyframes vdvTranslateLeft {
+	from {
+		transform: translateX(-100%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+@keyframes leaveSlide {
+	0 {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+
+@keyframes leaveSlideRight {
+	0 {
+		transform: translateX(0);
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(100%);
+	}
+}
+
+@keyframes leaveSlideTop {
+	0 {
+		transform: translateY(0);
+	}
+	100% {
+    transform: translateY(-50px);
+    opacity: 0;
+	}
+}
+
+@keyframes opacityElem {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
