@@ -310,8 +310,8 @@ cite {
 .about-post-img,
 .about-post-tracklist-img {
 	img {
-		width: auto;
-    max-width: 90%;
+    width: auto;
+    max-width: 100%;
 	}
 }
 .about-post-text-img {
@@ -355,8 +355,7 @@ cite {
 	grid-column: col-start 1/span 3;
 }
 .about-post-tracklist-b {
-  grid-column: col-start 4/span 3;
-  margin-top: 60px;
+  grid-column: col-start 3/span 3;
 }
 .about-post-video {
   grid-column: col-start 1/span 10;
@@ -373,14 +372,42 @@ cite {
     margin-top: 0;
     margin-bottom: 10px;
   }
-  .about-post-img {
-    padding-right: 50px;
-  }
+
   iframe {
+    width: 100%;
     height: 363px;
   }
   .about-post-desc {
-    padding-left: 20px;
+    grid-column: col-start 7/span 4;
+    width: 100%;
+    align-self: center;
+  }
+  .about-post-iframe {
+    grid-column: col-start 1/span 5;
+  }
+}
+.about-post-video-item {
+  grid-auto-flow: dense;
+  margin-bottom: 50px;
+  &:nth-child(odd) {
+    .about-post-iframe {
+      grid-column: col-start 6/span 5;
+    }
+    .about-post-desc {
+      grid-column: col-start 1/span 5;
+    }
+  }
+}
+
+.post-page-001 {
+  .about-post-text-img:nth-child(even) .about-post-img {
+    padding-right: 70px;
+  }
+}
+
+.post-page-002 {
+  .about-post-tracklist-b {
+    grid-column: col-start 4/span 3;
   }
 }
 
@@ -419,5 +446,11 @@ cite {
       top: 0;
       left: -180px;
     }
+  }
+  .about-post-tracklist-desc {
+    margin-left: 80px;
+  }
+  .about-post-tracklist-b {
+    margin-left: 60px;
   }
 }
