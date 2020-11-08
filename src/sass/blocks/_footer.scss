@@ -22,6 +22,15 @@ footer {
 	}
 }
 
-@media(max-width:575px){
-
+@media(max-width:991px){
+  footer {
+    padding: 30px 15px;
+    .copyright {
+      grid-column: col-start 1/span 2;
+    }
+  }
+  .footer-social,
+  footer .social-list {
+    display: none;
+  }
 }

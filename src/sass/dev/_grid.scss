@@ -29,3 +29,41 @@
 .box {
   display: flex;
 }
+
+
+@media (max-width: 991px) {
+  .grid {
+    grid-template-columns: [main-start] repeat(2, [col-start] minmax(80px, 1fr)) [main-end];
+  }
+  .grid-page {
+    grid-template-areas:
+              "header"
+              "main";
+    grid-template-rows: 60px minmax(calc(100vh - 60px), max-content);
+  }
+  main,
+  .grid-page main {
+    padding: 0 15px;
+  }
+  .grid-header {
+    grid-template-columns: [main-start] repeat(3, [col-start] minmax(80px, 1fr)) [main-end];
+  }
+  .shop-page,
+  .product-post {
+    &.grid-page {
+      grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    }
+  }
+}
+
+@media (max-width: 1399px) {
+  .grid {
+    grid-template-columns: [main-start] repeat(8, [col-start] minmax(80px, 1fr)) [main-end];
+  }
+  .grid-header {
+    grid-template-columns: [main-start] repeat(9, [col-start] minmax(80px, 1fr)) [main-end];
+  }
+}

@@ -54,3 +54,13 @@
 	margin-bottom: 5px;
 	cursor: pointer;
 }
+
+@media(max-width:1399px){
+  .custom-options {
+    background: #fff url(../img/noise.png) repeat;
+    min-width: 115px;
+  }
+  .custom-option {
+    margin-bottom: 7px;
+  }
+}
