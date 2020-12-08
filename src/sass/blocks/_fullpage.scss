@@ -243,7 +243,9 @@ html.fp-enabled,
 }
 @media (max-height: 568px) {
   .fp-slidesNav.fp-bottom {
-    bottom: 219px;
+    top: 25vh;
+    width: 20px;
+    right: 100%;
   } 
 }
 
@@ -255,7 +257,17 @@ html.fp-enabled,
 
 @media (max-width: 520px) { 
   .fp-slidesNav.fp-bottom {
-    bottom: 225px;
+    top: 25vh;
+    text-align: left;
+  }
+  .fp-slidesNav ul {
+    width: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .fp-slidesNav ul li {
+    display: block;
+    margin-bottom: 20px;
   }
 }
 
@@ -267,9 +279,6 @@ html.fp-enabled,
   }
   .fp-slide {
     padding: 0 15px;
-  }
-  .fp-slidesNav.fp-bottom {
-    bottom: 25px;
   }
 }
 
