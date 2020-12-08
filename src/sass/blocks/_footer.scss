@@ -34,3 +34,9 @@ footer {
     display: none;
   }
 }
+
+@media(max-width:1399px){
+  footer .copyright {
+    grid-column: col-start 2/span 7;
+  }
+}

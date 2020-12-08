@@ -870,19 +870,17 @@ cite {
   blockquote {
     padding-right: 0;
   }
-  .post-page-002 .about-post-text-img:nth-child(odd) img,
-  .post-page-003 .about-post-img img, 
-  .post-page-004 .about-post-img img {
+  .post-page-002 .about-post-text-img:nth-child(odd) img {
     max-width: 100%;
   }
   .post-page-003 .about-post-text-img:nth-child(odd) .about-post-img, 
   .post-page-004 .about-post-text-img:nth-child(odd) .about-post-img,
   .post-page-002 .about-post-text-img:nth-child(even) .about-post-img,
-  .post-page-004 .about-post-text-img:nth-child(odd) .about-post-img {
+  .post-page-004 .about-post-text-img:nth-child(odd) .about-post-img,
+  .about-post-img,
+  .about-post-tracklist-img {
     text-align: center;
   }
-  .post-page-003 .about-post-text-img:nth-child(odd) .about-post-desc, 
-  .post-page-004 .about-post-text-img:nth-child(odd) .about-post-desc,
   .post-page-002 .about-post-text-img:nth-child(even) .about-post-desc,
   .post-page-004 .about-post-text-img:nth-child(even) .about-post-img {
     margin-left: 0;
@@ -971,6 +969,57 @@ cite {
       margin-top: 30px;
     }
   }
+  .post-page-003 .about-post-tracklist-img img {
+    left: -50%;
+  }
+}
+@media (max-width: 1160px) {
+  .post-page-003 .about-post-tracklist-img img {
+    left: -80%;
+  }
 }
 
-@media (max-width: 1399px) {}
+@media (max-width: 1399px) {
+  .about-post, 
+  .about-post-text-img, 
+  .about-post-tracklist,
+  .about-post-footer {
+    grid-column: col-start 1/span 8;
+  }
+  .about-post-tracklist-desc {
+    grid-template-columns: [main-start] repeat(4, [col-start] minmax(80px, 1fr)) [main-end];
+    padding-left: 20px;
+  }
+  .about-post-tracklist-desc h2 {
+    grid-column: col-start 1/span 4;
+  }
+  .about-post-tracklist-a {
+    grid-column: col-start 1/span 2;
+  }
+  .about-post-tracklist-b {
+    grid-column: col-start 3/span 2;
+  }
+  .post-grid {
+    grid-column: col-start 2/span 8;
+  }
+  .post-page-003 .about-post-img img, 
+  .post-page-004 .about-post-img img {
+    max-width: 100%;
+  }
+  .post-page-003 .about-post-text-img:nth-child(odd) .about-post-desc, 
+  .post-page-004 .about-post-text-img:nth-child(odd) .about-post-desc {
+    margin-left: 20px;
+  }
+  // .post-page-003 .about-post-tracklist-img img {
+  //   left: -80%;
+  // }
+  .about-post-video .about-post-desc {
+    grid-column: col-start 6/span 4;
+  }
+  .about-post-video-item:nth-child(odd) .about-post-iframe {
+    grid-column: col-start 4/span 5;
+  }
+  .about-post-video-item:nth-child(odd) .about-post-desc {
+    grid-column: col-start 1/span 3;
+  }
+}
