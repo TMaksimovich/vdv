@@ -4,10 +4,10 @@
 	list-style: none;
 	display: flex;
 	li {
-		margin: 0 4px;
+		margin: 0 8px;
 		font-weight: 600;
-		font-size: 10px;
-		line-height: 14px;
+		font-size: 18px;
+		line-height: 20px;
 		color: rgba(18, 18, 18, 0.5);
 		align-self: center;
 	}
@@ -16,8 +16,8 @@
 		border-bottom: 1px solid $font-color;
 	}
 	.arrow {
-		width: 5px;
-		height: 5px;
+		width: 7px;
+		height: 7px;
 		border-right: 1px solid $font-color;
 		border-bottom: 1px solid $font-color;
 		box-sizing: border-box;
@@ -34,4 +34,18 @@
 	.arrow-next {
 		transform: rotate(-45deg);
 	}
+}
+
+@media (max-width: 767px) {
+  .pagination-list {
+    li {
+      margin: 0 4px;
+      font-size: 14px;
+      line-height: 16px;
+    }
+    .arrow {
+      width: 5px;
+      height: 5px;
+    }
+  }
 }

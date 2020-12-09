@@ -31,5 +31,9 @@
 	border-radius: 50%;
 	border: 1px solid $font-color;
 	background: url(../img/cart.svg) center 43% no-repeat;
-	background-size: 11px 14px;
+  background-size: 11px 14px;
+  outline: none;
+  display: block;
+  padding: 0;
+	margin: 0;
 }

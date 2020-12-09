@@ -178,14 +178,28 @@
 @media only screen 
   and (max-device-width : 991px) 
   and (orientation : landscape) {
-  .slide .grid {
-    overflow-y: auto;
+  .slide-desc-column {
+    overflow-y: scroll;
+    height: auto;
+    max-height: 80vh;
   }
   .slide-photo-column {
     padding-left: 15px;
   }
   .desc-header, .desc-header--mobile {
     margin-bottom: 10px;
+  }
+  .desc-header-name {
+    height: 45px !important;
+    .desc-header-vdv {
+      font-size: 45px;
+      line-height: 69px;
+    }
+    .desc-header-counter {
+      font-size: 70px;
+      top: -12px;
+      left: 38px;
+    }
   }
 }
 
@@ -233,7 +247,7 @@
     font-size: 100px;
   }
   .desc-header--mobile {
-    margin-top: 90px;
+    margin-top: 65px;
     margin-bottom: 10px;
     padding-bottom: 0;
   }
@@ -241,8 +255,7 @@
   
 @media (max-width: 520px) { 
   .slide .grid {
-    grid-template-rows: min-content;
-    align-content: space-around;
+    align-content: center;
   }
   .desc-header-counter {
     top: -47px;
@@ -302,7 +315,7 @@
     justify-self: center;
   }
   .slide-desc-column {
-    grid-row: 2/span 1;
+    grid-row: 2/span 2;
     align-self: center;
   }
   .desc-header-name {
