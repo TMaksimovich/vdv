@@ -4,7 +4,7 @@ $(document).ready(function() {
 	    'scrollHorizontally': true,
       'slidesNavigation': true,
       'fixedElements': 'header, .footer-social',
-      'responsiveWidth': 400,
+      'responsiveWidth': 570,
       'scrollOverflow':true,
       // 'responsiveHeight': 800,
       //'responsiveSlides': true,
