@@ -107,7 +107,8 @@
 	grid-column: col-start 2/span 4;
 	align-self: center;
 	img {
-		width: 100%;
+    width: 100%;
+    max-width: 450px;
 	}
 }
 .about-desc-box {
