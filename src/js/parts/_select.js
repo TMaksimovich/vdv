@@ -8,7 +8,7 @@ $(document).ready(function() {
         template += '<span class="custom-select-trigger">' + $(this).attr("placeholder") + '</span>';
         template += '<ul class="custom-options">';
         $(this).find("option").each(function() {
-          template += '<li class="custom-option ' + $(this).attr("class") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + '</li>';
+          template += '<li class="custom-option ' + $(this).attr("class") + '" data-value="' + $(this).attr("value") + '"><a href="'+ $(this).attr("data-link") +'">' + $(this).html() + '</a></li>';
         });
     template += '</ul></div>';
 

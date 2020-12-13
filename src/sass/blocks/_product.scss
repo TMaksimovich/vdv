@@ -36,7 +36,12 @@
   outline: none;
   display: block;
   padding: 0;
-	margin: 0;
+  margin: 0;
+  &:active,
+  &:focus {
+    background-color: #121212;
+    background-image: url(../img/cart-active.svg);
+  }
 }
 
 .woocommerce-Price-currencySymbol {
