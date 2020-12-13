@@ -1,6 +1,7 @@
 .product-img {
 	img {
-		width: 100%;
+    width: 100%;
+    height: auto;
 	}
 }
 .product-link {
@@ -36,4 +37,14 @@
   display: block;
   padding: 0;
 	margin: 0;
+}
+
+.woocommerce-Price-currencySymbol {
+  margin-left: 5px;
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.added_to_cart.wc-forward {
+  display: none;
 }

@@ -1,8 +1,10 @@
 .pagination-list {
-	padding-left: 0;
-	margin: 60px 0 35px;
-	list-style: none;
-	display: flex;
+  ul {
+    padding-left: 0;
+    margin: 60px 0 35px;
+    list-style: none;
+    display: flex;
+  }
 	li {
 		margin: 0 8px;
 		font-weight: 600;
@@ -13,7 +15,7 @@
 	}
 	.current {
 		color: $font-color;
-		border-bottom: 1px solid $font-color;
+		border-bottom: 2px solid $font-color;
 	}
 	.arrow {
 		width: 7px;

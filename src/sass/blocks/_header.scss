@@ -47,9 +47,6 @@ header {
 .menu-item {
 	margin: 0 25px;
 }
-.cart {
-	margin-left: 25px;
-}
 .toogle-menu-btn-box,
 .menu-box--mobile {
   display: none;
@@ -162,9 +159,6 @@ header {
   .menu-column {
     grid-column: col-start 3/span 1;
   }
-  .cart {
-    margin-left: 0;
-  } 
 }
 
 @media (max-width: 1399px) {

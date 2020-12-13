@@ -1,0 +1,26 @@
+.cart {
+  margin-left: 25px;
+  position: relative;
+}
+.basket-btn__counter {
+  background-color: #121212;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 12px;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  line-height: 15px;
+}
+
+@media (max-width: 991px) {
+  .cart {
+    margin-left: 0;
+  } 
+}
