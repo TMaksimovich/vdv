@@ -162,6 +162,7 @@
 	img {
     width: 100%;
     max-width: 538px;
+    height: auto;
 	}
 }
 .product-desc-box {
@@ -190,16 +191,20 @@
 }
 .product-desc-body {
 	padding-top: 10px;
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 }
 .product-price {
-	margin-top: 75px;
+	margin-top: 20px;
 	font-family: $font-family;
 	font-weight: 700;
 	font-size: 35px;
 	line-height: 44px;
 	color: #000000;
-	text-align: right;
+  text-align: right;
+  .woocommerce-Price-currencySymbol {
+    font-size: 32px;
+    font-weight: 500;
+  }
 }
 
 @media(max-width:767px){
