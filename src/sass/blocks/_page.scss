@@ -201,10 +201,6 @@
 	line-height: 44px;
 	color: #000000;
   text-align: right;
-  .woocommerce-Price-currencySymbol {
-    font-size: 32px;
-    font-weight: 500;
-  }
 }
 
 @media(max-width:767px){
@@ -473,8 +469,17 @@
 // *******************************************//
 
 // Магазин
+.product-post {
+  .woocommerce-Price-currencySymbol {
+    font-size: 32px;
+    font-weight: 500;
+  }
+  .btn {
+    outline: none;
+  }
+}
 .filter {
-    grid-column: col-start 12/span 1;
+    grid-column: col-start 12/span 2;
     justify-self: stretch;
     margin-bottom: 30px;
 }
@@ -516,7 +521,7 @@
 
 @media (max-width: 1399px) {
   .filter {
-    grid-column: col-start 8/span 1;
+    grid-column: col-start 8/span 2;
   }
   .product-grid {
     grid-template-columns: repeat(3, minmax(80px, 1fr));
