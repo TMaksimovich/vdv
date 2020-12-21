@@ -29,6 +29,9 @@
 .box {
   display: flex;
 }
+.content-box--full {
+  grid-column: col-start 2/span 10;
+}
 
 
 @media (max-width: 991px) {
@@ -58,6 +61,9 @@
         "footer";
     }
   }
+  .content-box--full {
+    grid-column: col-start 1/span 2;
+  }
 }
 
 @media (max-width: 1399px) {
@@ -66,5 +72,8 @@
   }
   .grid-header {
     grid-template-columns: [main-start] repeat(9, [col-start] minmax(80px, 1fr)) [main-end];
+  }
+  .content-box--full {
+    grid-column: col-start 2/span 6;
   }
 }

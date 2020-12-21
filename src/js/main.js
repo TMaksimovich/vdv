@@ -4,3 +4,4 @@
 //= parts/_button.js
 //= parts/_menu.js
 //= parts/_animation.js
+//= parts/_loader.js

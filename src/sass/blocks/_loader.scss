@@ -1,0 +1,26 @@
+.loader {
+  background: url(../img/noise.png) repeat, rgb(239, 239, 239);
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9999; 
+}
+
+.loader-inner {
+  background-image: url("../img/vdv-loader.gif");
+  background-repeat: no-repeat;
+  background-size: 150px 150px;
+  background-position: center center;
+  background-color: transparent;
+  height: 150px;
+  width: 150px;
+  margin-top: -75px;
+  margin-left: -75px;
+  left: 50%;
+  top: 50%;
+  position: absolute; 
+}

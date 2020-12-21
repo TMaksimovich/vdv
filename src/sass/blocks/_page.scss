@@ -483,6 +483,9 @@
     justify-self: stretch;
     margin-bottom: 30px;
 }
+select.custom-select {
+  display: none;
+}
 .product-grid {
 	grid-column: col-start 2/span 10;
 	grid-template-columns: repeat(4, minmax(50px, 33.3%) );
@@ -1047,5 +1050,22 @@ cite {
 @media (max-width: 1599px) {
   .post-grid {
     grid-column: col-start 2/span 10;
+  }
+}
+
+// Конфиденциальная информация
+.content-box--full {
+  padding: 70px 0;
+  grid-row: 1/3;
+  h1 {
+    font-size: 30px;
+    font-family: $font-family;
+    margin-bottom: 33px;
+  }
+}
+
+@media (max-width: 991px) {
+  .content-box--full {
+    padding: 20px 0;
   }
 }
