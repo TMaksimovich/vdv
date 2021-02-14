@@ -1,0 +1,16 @@
+.woocommerce {
+  .woocommerce-info {
+    border-top-color: $font-color;
+  }
+
+  .woocommerce-error, 
+  .woocommerce-info, 
+  .woocommerce-message {
+    background-color: transparent; 
+    color: $font-color;
+  }
+
+  .woocommerce-info::before {
+    color: $font-color;
+  }
+}

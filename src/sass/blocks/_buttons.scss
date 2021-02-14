@@ -9,9 +9,12 @@
 	line-height: 20px;
 	text-transform: uppercase;
 	text-align: center;
-	max-width: 150px;
+  max-width: 150px;
 }
 .btn-center {
 	display: block;
 	margin: auto;
+}
+.btn-large {
+  max-width: 100%;
 }

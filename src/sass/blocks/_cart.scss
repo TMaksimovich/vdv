@@ -19,6 +19,72 @@
   font-weight: 700;
   line-height: 15px;
 }
+.cart-page main{
+  //height: calc(100vh - 160px);
+}
+.cart-page {
+  .woocommerce {
+    table.shop_table {
+      border: none;
+      border-bottom: 1px solid rgba(18, 18, 18, 0.7);
+      margin-left: 0;
+      border-radius: 0;
+      th {
+        font-size: 16px;
+        font-family: $font-family;
+        padding-bottom: 19px;
+      }
+      td {
+        border-top: none;
+        padding-bottom: 35px;
+        font-size: 16px;
+        line-height: 22px;
+        &.product-subtotal {
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 30px;
+          font-family: $font-family;
+        }
+      }
+      p {
+        font-weight: 400;
+      }
+      .product-price {
+        text-align: left;
+        font-size: 18px;
+        font-weight: 700;
+      }
+      .woocommerce-Price-currencySymbol {
+        margin-left: 3px;
+        font-size: 17px;
+      }
+      .product-thumbnail {
+        padding-right: 60px;
+      }
+    }
+    a.remove {
+      font-size: 1.9em;
+      color: #121212!important;
+      font-weight: 500;
+      &:hover {
+        color: #fff!important;
+        background: #121212;
+      }
+    }
+    img {
+      max-width: 158px;
+      height: auto;
+    }
+  }
+}
+.cart-box {
+  grid-column: col-start 3/span 8;
+}
+.product-quantity input,
+button[name="update_cart"] {
+  display: none;
+}
+
 
 @media (max-width: 991px) {
   .cart {
