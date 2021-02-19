@@ -46,6 +46,16 @@
           font-family: $font-family;
         }
       }
+      .quantity {
+        font-family: $font-family;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        color: #000000;
+      }
+      .quantity-input__count {
+        padding: 0 10px;
+      }
       p {
         font-weight: 400;
       }
@@ -75,14 +85,51 @@
       max-width: 158px;
       height: auto;
     }
+    a.checkout-button {
+      background-color: transparent;
+      color: $font-color;
+      font-size: 16px;
+      font-family: $font-family;
+      font-weight: 600;
+      line-height: 20px;
+      text-transform: uppercase;
+      border-radius: 29px;
+      border: 1px solid #121212;
+      padding: 15px 40px;
+    }
   }
 }
 .cart-box {
   grid-column: col-start 3/span 8;
 }
 .product-quantity input,
-button[name="update_cart"] {
+.woocommerce .actions button[name="update_cart"] {
   display: none;
+}
+.woocommerce .cart-collaterals .cart_totals {
+  text-align: right;
+  margin-top: 5px;
+}
+.woocommerce .cart_totals table.shop_table {
+  border-bottom: none;
+  margin-bottom: 0;
+  text-align: right;
+}
+.shop_table {
+  .order-total {
+    font-family: $font-family;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 25px;
+    .woocommerce-Price-amount  {
+      margin-left: 10px;
+      font-size: 28px;
+      line-height: 35px;
+    }
+    .woocommerce-Price-currencySymbol {
+      font-size: 26px;
+    }
+  }
 }
 
 

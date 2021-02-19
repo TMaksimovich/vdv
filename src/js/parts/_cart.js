@@ -26,7 +26,7 @@ jQuery(function( $ ){
 			button.parent().find( '.quantity-input__minus' ).removeClass( 'inactive' );
 		}
 
-		$("[name='update_cart']").trigger("click");
+    $("[name='update_cart']").trigger("click");
 
 
 	});
