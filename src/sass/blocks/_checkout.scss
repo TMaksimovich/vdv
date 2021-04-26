@@ -1,0 +1,118 @@
+.checkout-page {
+  .content-box--full {
+    grid-column: col-start 4/span 6;
+  }
+  .woocommerce-billing-fields > h3 {
+    display: none;
+  }
+  .woocommerce-billing-fields__field-wrapper {
+    abbr,
+    .optional {
+      display: none;
+    }
+    margin-top: 25px;
+  }
+  .woocommerce-input-wrapper {
+    display: block;
+    margin-bottom: 7px;
+  }
+  .woocommerce {
+    form {
+      .form-row-first {
+        width: 100%;
+      }
+      .form-row {
+        label {
+          font-size: 12px;
+          line-height: 16px;
+          margin-bottom: 3px;
+        }
+        input.input-text {
+          height: 47px;
+          background-color: rgba(255, 255, 255, 0.6);
+          border: 1px solid rgba(18, 18, 18, 0.45);
+          padding: 5px 13px;
+        }
+      }
+    }
+    table.shop_table {
+      border: none;
+      display: flex;
+      justify-content: flex-end;
+      margin: 75px 0px 8px 0;
+      tbody th, 
+      tfoot td, 
+      tfoot th {
+        border-top: none;
+        font-size: 16px;
+        font-family: $font-family;
+        padding: 0 0 5px 0;
+      }
+      th {
+        width: 130px;
+        font-weight: 400;
+      }
+      td {
+        font-weight: 600;
+      }
+      .woocommerce-Price-currencySymbol {
+        margin-left: 3px;
+        font-size: 16px;
+      }
+      .order-delivery {
+        th,
+        td {
+          padding-bottom: 0;
+        }
+      }
+      .order-total {
+        th {
+          font-size: 20px;
+        }
+        td {
+          font-size: 28px;
+          font-weight: 700;
+        }
+        .woocommerce-Price-currencySymbol {
+          font-size: 26px;
+        }
+      }
+    }
+    .woocommerce-checkout #payment {
+      background: none;
+      .button {
+        width: 239px;
+        height: 48px;
+        border: 1px solid #121212;
+        border-radius: 29px;
+        background-color: transparent;
+        color: $font-color;
+        font-size: 16px;
+        line-height: 20px;
+        font-family: $font-family;
+        font-weight: 600;
+        text-transform: uppercase;
+        outline: none;
+      }
+      div.form-row {
+        padding-right: 0;
+      }
+    }
+  }
+  .blockUI.blockOverlay {
+    position: relative! important;
+    display: none! important;
+  }
+}
+.delivery-box {
+  margin-top: 15px;
+  p {
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 991px) {
+  
+}
